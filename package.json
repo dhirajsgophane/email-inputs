@@ -1,0 +1,25 @@
+{
+  "name": "email-inputs",
+  "version": "1.0.0",
+  "description": "Create reusable component to allow user to enter email IDs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "Test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhirajsgophane/email-inputs.git"
+  },
+  "keywords": [
+    "assignments"
+  ],
+  "author": "Dhiraj Gophane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhirajsgophane/email-inputs/issues"
+  },
+  "homepage": "https://github.com/dhirajsgophane/email-inputs#readme"
+}

@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrapper .email-form {
+  background: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 40%;
+}
+
+.wrapper .email-form .email-form-body {
+  padding: 32px 50px 24px 50px;
+  background: #F8F8F7;
+}
+
+.wrapper .email-form .email-form-body .title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 27px;
+  color: #050038;
+}
+
+.wrapper .email-form .email-form-actions {
+  padding: 24px 50px;
+}
+
+.wrapper .email-form .email-form-actions button {
+  font-size: 14px;
+  line-height: 28px;
+  padding: 6px 18px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 10px;
+  color: #ffffff;
+  background: #4262FF;
+  cursor: pointer;
+  outline: none;
+}
+
+.wrapper .email-form .email-form-actions button:hover {
+  background: #0000ffd9;
+}
+
+/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=main.css.map */
