@@ -22,7 +22,7 @@ class EmailInput {
 	}
 
 	addEmail(target, value){
-		const updatedEmail = value?.trim();
+		const updatedEmail = value.trim();
 		if(updatedEmail) {
 			const emailEntry = document.createElement('div');
 			emailEntry.classList.add('email-entry');
@@ -40,9 +40,10 @@ class EmailInput {
 	}
 
 	handlePaste(event) {
-		const {target, clipboardData} = event;
+		const {target} = event;
+		const clipboardData = event.clipboardData || window.clipboardData || event.originalEvent.clipboardData;
 		event.preventDefault();
-		const emailList = clipboardData.getData('Text')?.split(',');
+		const emailList = clipboardData.getData('Text').split(',');
 		emailList.forEach((email) => this.addEmail(target, email));
 		this.notifySubscribers();
 	}
@@ -83,9 +84,17 @@ class EmailInput {
 		return this.getTotalEntries().length - this.referenceNode.querySelectorAll('.email-entry.invalid').length;
 	}
 
+	customerForEach(arrayLikeStructure) {
+		const customArray = [];
+		for(let i=0; i< arrayLikeStructure.length; i++){
+			customArray.push(arrayLikeStructure[i]);
+		}
+		return customArray;
+	}
+
 	// A method to get all entered emails. Both valid and Invalid
 	getTotalEntries() {
-		return Array.from(this.getAllEmailNodes()).map((emailNode)=> emailNode.innerText);
+		return this.customerForEach(this.getAllEmailNodes()).map((emailNode)=> emailNode.innerText);
 	}
 
 	// A method to replace all entered emails with new ones

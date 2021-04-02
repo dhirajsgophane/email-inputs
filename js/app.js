@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const employeeEmailInput = new EmailInput(employeeEmailInputNode);
 	const customerEmailInput = new EmailInput(customerEmailInputNode);
 
-	setEventListernersForActions(employeeEmailInput);
-	setEventListernersForActions(customerEmailInput);
+	setEventListernersForActions(document.getElementById('employee-emails'), employeeEmailInput);
+	setEventListernersForActions(document.getElementById('customer-emails'), customerEmailInput);
 
 	employeeEmailInput.subscribeToEmailList((response) => {
 		console.log(response);

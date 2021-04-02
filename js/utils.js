@@ -17,8 +17,7 @@ const showTotalCountAlert = (emailInputObj) => {
 	alert('Total ' + totalValidEmailCount + ' valid ' + (totalValidEmailCount === 1 ? 'email' : 'emails'));
 };
 
-const setEventListernersForActions = (emailInputObj) => {
-	const currentEmailForm = emailInputObj.referenceNode.closest('.email-form');
+const setEventListernersForActions = (currentEmailForm, emailInputObj) => {
 
 	// Event listener to Add Random email on click of button
 	currentEmailForm.querySelector('button.add-email').addEventListener('click', () => emailInputObj.addExternalEmail(generateRandomEmail()));
