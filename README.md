@@ -28,21 +28,25 @@ customEmailInput.addExternalEmail('test@gmail.com')
 ```
 
 ## Get Total Email Count (Valid and Invalid)
+Get total entries count inside list including invalid and valid emails
 ```js
 customEmailInput.getTotalEntries()
 ```
 
 ## Get Only Valid Emails
+Get only valid email count in the list
 ```js
 customEmailInput.getValidEmailEntriesCount()
 ```
 
 ## Replace existing list with new list
+Replace existing list of emails with new email list. It accepts array of email strings
 ```js
 customEmailInput.replaceEmailList(['test1@gmail.com', 'test2@gmail.com'])
 ```
 
 ## Subscribe to email list changes
+Subscribe to changes in the email list with a call back function. Provided function will be called with updated data from the list whenever user adds or removed an email from the list
 ```js
 customEmailInput.subscribeToEmailList(callBackfunction)
 ```
